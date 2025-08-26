@@ -10,13 +10,11 @@ btn.onclick = function() {
     
     }else{
 
-        let output = document.getElementById('input').value;
-
         let parent = document.getElementById("output");
 
         let newp = document.createElement('p');
 
-        newp.textContent = (output);
+        newp.textContent = (input);
 
         newp.classList.add("output");
 
@@ -30,15 +28,11 @@ btn.onclick = function() {
 
         parent.appendChild(newbtn);
 
-        let remove = document.querySelector(".rembtn");
+        newbtn.onclick = function() {
 
-        remove.onclick = function() {
+            newbtn.remove();
 
-            remove.remove();
-
-            let output = document.querySelector(".output");
-
-            output.remove();
+            newp.remove();
         }
 
     }
